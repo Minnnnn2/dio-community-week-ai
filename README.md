@@ -4,7 +4,7 @@ Este repositório contém o código (flow exportado do LangFlow) e a síntese t�
 
 ## 🔗 Links Rápidos
 
-- **[Community Week da DIO](https://pages.dio.me/lp-community-week2)** - Evento onde a live foi realizada
+- **[DIO](https://www.dio.me)** - Conheça plataforma educacional da DIO ;)
 - **[LangFlow (GitHub)](https://github.com/langflow-ai/langflow)** - Plataforma open-source utilizada no projeto
 - **[DataStax](https://www.datastax.com)** - Acesso gratuito ao LangFlow online após cadastro
 - **[Azure OpenAI Service](https://azure.microsoft.com/pt-br/products/ai-services/openai-service)** - Provedor de LLM usado na demonstração
@@ -13,7 +13,7 @@ Este repositório contém o código (flow exportado do LangFlow) e a síntese t�
 
 ## 🚀 Objetivos
 
-Este projeto, parte da Community Week da DIO, teve como foco demonstrar o potencial da Inteligência Artificial e dos agentes inteligentes para revolucionar o futuro do trabalho. Especificamente, o objetivo principal foi **criar um agente de IA, o "Recruiter Specialist"**, capaz de:
+Este projeto, parte da [Community Week da DIO](https://pages.dio.me/lp-community-week2), teve como foco demonstrar o potencial da Inteligência Artificial e dos agentes inteligentes para revolucionar o futuro do trabalho. Especificamente, o objetivo principal foi **criar um agente de IA, o "Recruiter Specialist"**, capaz de:
 *   Analisar o perfil público de um profissional na plataforma DIO.
 *   Comparar as habilidades e conquistas do profissional com os requisitos de uma descrição de vaga específica.
 *   Gerar um resumo otimizado para currículo.
@@ -86,6 +86,6 @@ Lembre-se sempre de **estar atento à precificação** dos modelos de LLM que vo
 
 A Inteligência Artificial serve para nos ajudar a sermos mais produtivos e focarmos no que realmente importa. Use este projeto como um trampolim para criar suas próprias soluções inteligentes!
 
-Compartilhe suas criações e aprendizados com a comunidade DIO! Use a hashtag #CommunityWeekDIO nas redes sociais e não se esqueça de nos marcar.
+Compartilhe suas criações e aprendizados com a comunidade DIO! Use as hashtags **#DIOAiAgents** e **#CommunityWeekAiAgents** nas redes sociais.
 
 Estamos ansiosos para ver o que você vai construir 🚀
