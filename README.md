@@ -4,7 +4,7 @@ Este repositório contém o código (flow exportado do LangFlow) e a síntese t�
 
 ## 🔗 Links Rápidos
 
-- **[DIO](https://www.dio.me)** - Conheça plataforma educacional da DIO ;)
+- **[DIO](https://www.dio.me)** - Conheça ecossistema educacional da DIO 
 - **[LangFlow (GitHub)](https://github.com/langflow-ai/langflow)** - Plataforma open-source utilizada no projeto
 - **[DataStax](https://www.datastax.com)** - Acesso gratuito ao LangFlow online após cadastro
 - **[Azure OpenAI Service](https://azure.microsoft.com/pt-br/products/ai-services/openai-service)** - Provedor de LLM usado na demonstração
@@ -13,7 +13,7 @@ Este repositório contém o código (flow exportado do LangFlow) e a síntese t�
 
 ## 🚀 Objetivos
 
-Este projeto, parte da [Community Week da DIO](https://pages.dio.me/lp-community-week2), teve como foco demonstrar o potencial da Inteligência Artificial e dos agentes inteligentes para revolucionar o futuro do trabalho. Especificamente, o objetivo principal foi **criar um agente de IA, o "Recruiter Specialist"**, capaz de:
+Este projeto, parte da [Community Week da DIO](https://pages.dio.me/lp-community-week2), teve como foco demonstrar o potencial da Inteligência Artificial (IA) e dos agentes inteligentes para revolucionar o futuro do trabalho. Especificamente, o objetivo principal foi **criar um agente de IA, o "Recruiter Specialist"**, capaz de:
 *   Analisar o perfil público de um profissional na plataforma DIO.
 *   Comparar as habilidades e conquistas do profissional com os requisitos de uma descrição de vaga específica.
 *   Gerar um resumo otimizado para currículo.
@@ -24,9 +24,9 @@ A intenção é transformar as _skills_ adquiridas na DIO em elementos palpávei
 
 ## 🛠️ Conhecendo o LangFlow
 
-Para construir nosso agente, utilizamos o **[LangFlow](https://github.com/langflow-ai/langflow)**. O LangFlow é uma ferramenta **open-source e visual (low-code/no-code)** para construir e implantar agentes empoderados por Inteligência Artificial.
+Para construir nosso agente, utilizamos o **[LangFlow](https://github.com/langflow-ai/langflow)**. O LangFlow é uma ferramenta **open-source e visual (low-code/no-code)** para construir e implantar agentes empoderados por IA.
 
-*   **Origem Brasileira:** Nascido de uma startup brasileira, foi adquirido pela DataStax (Vale do Silício) e recebeu incentivo da IBM.
+*   **Origem Brasileira:** Nascido de uma startup brasileira, foi adquirido pela DataStax, empresa do Vale do Silício agora parte dos investimentos em IA da IBM.
 *   **Interface Visual:** Permite criar "flows" (fluxos de trabalho) conectando componentes prontos como inputs, outputs, prompts, modelos de linguagem (LLMs) e ferramentas (tools).
 *   **Flexibilidade:** Suporta diversas fontes de dados (URL, arquivos, APIs, etc.) e integrações com os principais provedores de LLMs do mercado.
 *   **Código Editável:** Embora seja low-code, permite editar o código Python por trás dos componentes para customização avançada.
@@ -84,7 +84,7 @@ Lembre-se sempre de **estar atento à precificação** dos modelos de LLM que vo
 
 ## 💡 Conclusão
 
-A Inteligência Artificial serve para nos ajudar a sermos mais produtivos e focarmos no que realmente importa. Use este projeto como um trampolim para criar suas próprias soluções inteligentes!
+A IA serve para nos ajudar a sermos mais produtivos e focarmos no que realmente importa. Use este projeto como um trampolim para criar suas próprias soluções inteligentes!
 
 Compartilhe suas criações e aprendizados com a comunidade DIO! Use as hashtags **#DIOAiAgents** e **#CommunityWeekAiAgents** nas redes sociais.
 
